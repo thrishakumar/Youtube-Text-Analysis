@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Analysis</title>
+
+</head>
+<body>
+<div class="about-container" style="text-align: center;box-shadow: 0 4px 8px 0 #00B4CC;padding: 20px;margin: 50px;" >
+    <h1 style=" color: #00B4CC; font-family: 'Open Sans', sans-serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0"> Text Analysis</h1>
+       <a href="{% url 'sentiment-url' %}" ><button class="GFG" style="background-color: white;border: 2px solid black;color: black;padding: 5px 10px;text-align: center;display: inline-block;font-size: 16px;margin: 10px 30px;cursor: pointer">Search Link</button> </a>
+
+</div>
+       {% for link in links %}
+
+  <div class="card" style="  box-shadow: 0 4px 8px 0 #00B4CC;display: grid;grid-template-row:  repeat(2, 1fr);padding: 5px;margin: 10px;">
+
+
+
+
+      <h1 style="font-size: 28px; font-weight: 300; color:#00B4CC; margin: 0 0 24px; font-family: 'Open Sans', sans-serif" >{{ link.link}} </h1>
+
+    </div>
+
+{% endfor %}
+
+
+</body>
+</html>

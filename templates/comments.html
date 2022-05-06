@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .about-container {
+  text-align: center;
+  box-shadow: 0 4px 8px 0 #3eadcf, 0 6px 20px 0 #3eadcf;
+  padding: 20px;
+  margin: 50px;
+}
+
+
+
+
+	table.tableizer-table {
+		font-size: 14px;
+		border: 1px solid #CCC;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	.tableizer-table td {
+		padding: 4px;
+		margin: 3px;
+		border: 1px solid #CCC;
+	}
+	.tableizer-table th {
+		background-color: #34CEEA;
+		color: #FFF;
+		font-weight: bold;
+	}
+</style>
+<body>
+ <div class="about-container">
+                            <table class="tableizer-table">
+                                <thead>
+                                    <tr>
+                                        <th>Comments</th>
+                                        <th>Likes</th>
+                                        <th>Time</th>
+                                        <th>Subjectivity</th>
+                                        <th>Polarity</th>
+                                        <th>Analysis</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% if comments %}
+                                    {% for i in comments %}
+                                    <tr>
+                                        <td>{{i.Comment}}</td>
+                                        <td>{{i.Likes}}</td>
+                                        <td>{{i.Time}}</td>
+                                        <td>{{i.Subjectivity}}</td>
+                                        <td>{{ i.Polarity }}</td>
+                                        <td>{{ i.Analysis }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                    {% endif %}
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+</body>
+</html>
