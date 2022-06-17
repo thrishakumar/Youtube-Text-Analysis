@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Analysis of YouTube Video</title>
+</head>
+<style>
+    h3 {
+
+
+        color: #00B4CC;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 45px;
+        font-weight: normal;
+        line-height: 48px;
+        margin: 0;
+        text-align: center;
+
+    }
+    h4{
+        color: #00B4CC;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 30px;
+        font-weight: normal;
+        line-height: 48px;
+        margin: 0;
+        text-align: center;
+    }
+    img{
+
+ margin-left: 20%;
+
+    }
+    #wrapper{
+
+       width:700px;
+            height:200px;
+            background-color:#00B4CC;
+            margin-left: 27%;
+           margin-top: 5%;
+             padding-top:20px;
+            padding-left:20px;
+            padding-right:20px;
+    }
+
+#first{
+    float:left;
+            width:200px;
+            height:160px;
+            background-color:white;
+            border:solid black
+}
+ #second{
+    float:left;
+            width:200px;
+            height:160px;
+            background-color:white;
+            border:solid black;
+            margin-left:46px;
+    }
+  #third {
+      float: right;
+      width: 200px;
+      height: 160px;
+      background-color: white;
+      border: solid black;
+  }
+  p{
+
+
+       color: #00B4CC;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 28px;
+      text-align: center;
+
+  }
+  .cloud{
+      margin-left: 40%;
+      width:425px;
+      height:256px;
+  }
+
+</style>
+<body>
+<div id="wrapper">
+     <div id="first">
+
+        <h4>
+      Positive
+      </h4>
+         <p>{{senti.Positive}}</p>
+     </div>
+     <div id ="second">
+        <h4>
+         Negative
+        </h4>
+         <p>{{senti.Negative}}</p>
+     </div>
+     <div id="third">
+     <h4>
+      Neutral
+      </h4>
+         <p>{{senti.Neutral}}</p>
+     </div>
+ </div>
+<br><br>
+<div>
+    <h3> Analysis over Time</h3>
+    <br>
+
+    <img src="/media/barchart.jpg" />
+
+    </div>
+
+<div>
+    <div>
+        <h3> Frequently used words in the comments </h3>
+        <br>
+        <img class="cloud" src="/media/wc1.jpg" />
+    </div>
+    <button type="button">
+    <a href="{% url 'subtitles-url' %}">Subtitles</a>
+    </button>
+
+</div>
+</body>
+</html>
