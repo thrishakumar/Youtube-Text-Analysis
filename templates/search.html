@@ -35,16 +35,10 @@
           <h1 class="mt-2">Text Analysis</h1>
           <hr class="mt-0 mb-4">
           <p>
-
-          {% block content %}
-
-
-
+             {% block content %}
 {% load crispy_forms_tags %}
-
 <form action="" method="POST">
-
-         {{ form|crispy }}
+{{ form|crispy }}
      {% csrf_token %}
     <button type="submit" class="postbutton">Post</button>
 </form>
